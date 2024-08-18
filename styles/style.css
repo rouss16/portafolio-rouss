@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --color-primario:  #000000;
+    --color-secundario: aqua; 
+    --color-tercero: #E2BBE9;
+    --color-cuarto: yellow;
+    --color-quinto: #F6F6F6;
+    --color-sexto: rgb(0, 255, 191);
+
+    --fuente-monserrat: 'monserrat',sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+
+}
+
+* {
+   padding: 0;
+   margin: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /* height: 100vh; se quita por que ya tenemos mas elementos en nuestra pantalla */
+}
+.header{
+padding: 2% 0% 0% 15%; /*en el padding colocamos los valores para centrar ala altura de presentacion */
+}
+
+.header__menu{
+display: flex;
+gap: 80px; /* crea un espacio entre home vs acerca de mi*/
+}
+
+.header__menu__link{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-cuarto);
+    text-decoration: none;
+}
+
+
+/*{ 
+    margin: 0;
+    padding: 0;
+ }  */
+ 
+ /*ESTE CODIGO LO AGREGUE PARA CAMBIAR EL COLOR DE TEXTO */ 
+.texto-destaque {
+    color: var(--color-tercero);
+ }
+
+
+ /*ESTE CODIGO LO AGREGUE PARA CAMBIAR EL COLOR DE TEXTO */ 
+ /*.titulo-blog {
+    color: white;  
+ } */
+
+
+
+.presentacion{
+    display: flex;
+    align-items: center;    /*ESTE CODIGO AYUDA A CENTRAR EL LA PAGINA */
+    padding: 6% 15% ;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__cotenido{
+    width: 50% px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*esta propiedad ayuda a tener espacio entre filas */
+}
+
+.presentacion__cotenido__titulo{
+    font-size: 2.25rem;  /* representa el zoom del tamaño de leta */
+    font-family: var(--fuente-krona);
+    color: var(--color-secundario);
+}
+
+.titulo-destaque {
+    color: var(--color-cuarto);
+}
+
+.presentacion__cotenido__texto{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+    color: var(--color-tercero);
+}
+.presentacion__enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulos{
+ font-family: var(--fuente-krona) ;   
+    font-size: 1.5rem;
+ font-weight: 400;
+}
+.presentacion__enlaces__link{
+    width: 50%;                             /*define el tamaño de mis cuadritose de instagra Githyb  */
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600px;
+    padding: 21.5px 0;
+    text-decoration: none; /*ayuda a quitar el subrayado de la letra */
+    color: var(--color-quinto);
+    font-family: var(--fuente-monserrat);
+    border: 8px outset var(--color-secundario);   /*define el estilo del border, buscars en border css google*/
+    display: flex;  /* alinea botones y texto */
+    justify-content: center;   /* se utiliza para alinear objetos horizontal */
+    gap: 10px; /* se utiliza para separa la imagen de Instagram vs la letra instagrama */
+
+}
+.presentacion__enlaces__link:hover{  /* se utiliza para sombrear el cursor sobre el boton cuando lo estamos seleccionando */
+    background-color: var(--color-primario);
+}
+
+.presentacion__imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-sexto);
+    padding: 24px;         /* este elemento se crea para crear una cajita que contiene el texto */
+    color: var(--color-primario);     /* color de texto*/
+    text-align: center;  /* alinea el texto */
+    font-family: var(--fuente-monserrat);  /* tipo de fuente */
+    font-size:1.5rem;     /*el tamaño de la fuente */
+    font-weight:400;
+
+}
+@media(max-width:1200px){ /* el parámetro esperado por @media() para definir un tamaño de pantalla de hasta "1200px" de ancho */
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__cotenido{
+        width:auto;
+    }
+}
